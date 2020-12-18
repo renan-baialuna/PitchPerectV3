@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		806A5161258D1B7E00050F36 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A5160258D1B7E00050F36 /* PlaySoundsViewController+Audio.swift */; };
 		80C6E2E6258CEF2100472266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6E2E5258CEF2100472266 /* AppDelegate.swift */; };
 		80C6E2E8258CEF2100472266 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6E2E7258CEF2100472266 /* SceneDelegate.swift */; };
 		80C6E2EA258CEF2100472266 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6E2E9258CEF2100472266 /* RecordViewController.swift */; };
 		80C6E2ED258CEF2100472266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80C6E2EB258CEF2100472266 /* Main.storyboard */; };
 		80C6E2EF258CEF2200472266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80C6E2EE258CEF2200472266 /* Assets.xcassets */; };
 		80C6E2F2258CEF2200472266 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80C6E2F0258CEF2200472266 /* LaunchScreen.storyboard */; };
-		80C6E2FB258D029E00472266 /* PlayAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6E2FA258D029E00472266 /* PlayAudioViewController.swift */; };
+		80C6E2FB258D029E00472266 /* PlaySoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6E2FA258D029E00472266 /* PlaySoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		806A5160258D1B7E00050F36 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 		80C6E2E2258CEF2100472266 /* PitchPerfectV3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfectV3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C6E2E5258CEF2100472266 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C6E2E7258CEF2100472266 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +27,7 @@
 		80C6E2EE258CEF2200472266 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80C6E2F1258CEF2200472266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80C6E2F3258CEF2200472266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80C6E2FA258D029E00472266 /* PlayAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAudioViewController.swift; sourceTree = "<group>"; };
+		80C6E2FA258D029E00472266 /* PlaySoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				80C6E2E9258CEF2100472266 /* RecordViewController.swift */,
-				80C6E2FA258D029E00472266 /* PlayAudioViewController.swift */,
+				80C6E2FA258D029E00472266 /* PlaySoundViewController.swift */,
+				806A5160258D1B7E00050F36 /* PlaySoundsViewController+Audio.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -149,10 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				806A5161258D1B7E00050F36 /* PlaySoundsViewController+Audio.swift in Sources */,
 				80C6E2EA258CEF2100472266 /* RecordViewController.swift in Sources */,
 				80C6E2E6258CEF2100472266 /* AppDelegate.swift in Sources */,
 				80C6E2E8258CEF2100472266 /* SceneDelegate.swift in Sources */,
-				80C6E2FB258D029E00472266 /* PlayAudioViewController.swift in Sources */,
+				80C6E2FB258D029E00472266 /* PlaySoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

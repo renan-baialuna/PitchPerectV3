@@ -96,21 +96,206 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
         </scene>
-        <!--Play Audio View Controller-->
+        <!--Play Sound View Controller-->
         <scene sceneID="sFg-jC-nMK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uYt-FC-E3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="ZYx-As-Lyj" customClass="PlayAudioViewController" customModule="PitchPerfectV3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZYx-As-Lyj" customClass="PlaySoundViewController" customModule="PitchPerfectV3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WPV-uA-GKj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="XLH-s0-cz5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-bm-pk3">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="173.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7q-8I-erA">
+                                                <rect key="frame" x="0.0" y="0.0" width="203" height="173.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkS-m8-jkL">
+                                                        <rect key="frame" x="25" y="10" width="153" height="153.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="SkS-m8-jkL" secondAttribute="height" multiplier="1:1" id="SPD-J4-shU"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Slow"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="ZYx-As-Lyj" eventType="touchUpInside" id="L0Q-8e-rwS"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="SkS-m8-jkL" firstAttribute="top" secondItem="W7q-8I-erA" secondAttribute="top" constant="10" id="28n-ia-HiY"/>
+                                                    <constraint firstItem="SkS-m8-jkL" firstAttribute="centerX" secondItem="W7q-8I-erA" secondAttribute="centerX" id="Tam-xJ-yRA"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SkS-m8-jkL" secondAttribute="bottom" constant="10" id="YpA-P5-PQx"/>
+                                                    <constraint firstItem="SkS-m8-jkL" firstAttribute="centerY" secondItem="W7q-8I-erA" secondAttribute="centerY" id="omb-xc-ium"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rll-mq-J1F">
+                                                <rect key="frame" x="211" y="0.0" width="203" height="173.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sv3-H9-W3X">
+                                                        <rect key="frame" x="25" y="10" width="153" height="153.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="sv3-H9-W3X" secondAttribute="height" multiplier="1:1" id="FzW-OL-lnf"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Fast"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="ZYx-As-Lyj" eventType="touchUpInside" id="3yt-xz-zIc"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="sv3-H9-W3X" firstAttribute="centerX" secondItem="Rll-mq-J1F" secondAttribute="centerX" id="B6k-Hk-GtE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sv3-H9-W3X" secondAttribute="bottom" constant="10" id="TyL-9s-tnM"/>
+                                                    <constraint firstItem="sv3-H9-W3X" firstAttribute="top" secondItem="Rll-mq-J1F" secondAttribute="top" constant="10" id="gIV-kf-JaZ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-qC-gdh">
+                                        <rect key="frame" x="0.0" y="200.5" width="414" height="173"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvV-fR-ZhP">
+                                                <rect key="frame" x="0.0" y="0.0" width="203" height="173"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r14-9g-khf">
+                                                        <rect key="frame" x="25" y="10" width="153" height="153"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="r14-9g-khf" secondAttribute="height" multiplier="1:1" id="WNd-d3-jX0"/>
+                                                        </constraints>
+                                                        <state key="normal" image="HigthPitch"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="ZYx-As-Lyj" eventType="touchUpInside" id="MoN-zz-pVt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="r14-9g-khf" firstAttribute="centerX" secondItem="nvV-fR-ZhP" secondAttribute="centerX" id="Aqq-0U-3UT"/>
+                                                    <constraint firstItem="r14-9g-khf" firstAttribute="top" secondItem="nvV-fR-ZhP" secondAttribute="top" constant="10" id="P03-UJ-fpP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="r14-9g-khf" secondAttribute="bottom" constant="10" id="bw5-nq-GPx"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuQ-if-zoi">
+                                                <rect key="frame" x="211" y="0.0" width="203" height="173"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulj-yT-v3c">
+                                                        <rect key="frame" x="25" y="10" width="153" height="153"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Ulj-yT-v3c" secondAttribute="height" multiplier="1:1" id="Dq7-4n-y6F"/>
+                                                        </constraints>
+                                                        <state key="normal" image="LowPitch"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="ZYx-As-Lyj" eventType="touchUpInside" id="oew-gv-iOO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ulj-yT-v3c" firstAttribute="top" secondItem="QuQ-if-zoi" secondAttribute="top" constant="10" id="5oW-JT-Z94"/>
+                                                    <constraint firstItem="Ulj-yT-v3c" firstAttribute="centerX" secondItem="QuQ-if-zoi" secondAttribute="centerX" id="dMj-Cu-BCR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ulj-yT-v3c" secondAttribute="bottom" constant="10" id="ieq-Pk-LY7"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bp3-Ms-Wdo">
+                                        <rect key="frame" x="0.0" y="400.5" width="414" height="173.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31l-YH-aci">
+                                                <rect key="frame" x="0.0" y="0.0" width="203" height="173.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3j-s3-m8G">
+                                                        <rect key="frame" x="25" y="10" width="153" height="153.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="W3j-s3-m8G" secondAttribute="height" multiplier="1:1" id="JY5-u7-FKh"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Echo"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="ZYx-As-Lyj" eventType="touchUpInside" id="N3V-3E-uzW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="W3j-s3-m8G" firstAttribute="top" secondItem="31l-YH-aci" secondAttribute="top" constant="10" id="0cf-En-aHN"/>
+                                                    <constraint firstItem="W3j-s3-m8G" firstAttribute="centerX" secondItem="31l-YH-aci" secondAttribute="centerX" id="gnB-dD-OxO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="W3j-s3-m8G" secondAttribute="bottom" constant="10" id="l90-0N-9v2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmI-WY-Br3">
+                                                <rect key="frame" x="211" y="0.0" width="203" height="173.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMc-sW-int">
+                                                        <rect key="frame" x="25" y="10" width="153" height="153.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="JMc-sW-int" secondAttribute="height" multiplier="1:1" id="dgJ-Z9-DaY"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Reverb"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="ZYx-As-Lyj" eventType="touchUpInside" id="auM-xU-PKQ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="JMc-sW-int" firstAttribute="top" secondItem="RmI-WY-Br3" secondAttribute="top" constant="10" id="28h-dh-7Ft"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JMc-sW-int" secondAttribute="bottom" constant="10" id="Ffr-7I-xB0"/>
+                                                    <constraint firstItem="JMc-sW-int" firstAttribute="centerX" secondItem="RmI-WY-Br3" secondAttribute="centerX" id="Rtp-HV-s8y"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cf-Eu-0Nt">
+                                        <rect key="frame" x="0.0" y="601" width="414" height="173"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgO-cj-FR6">
+                                                <rect key="frame" x="130.5" y="10" width="153" height="153"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="IgO-cj-FR6" secondAttribute="height" multiplier="1:1" id="XJx-ot-Doj"/>
+                                                </constraints>
+                                                <state key="normal" image="StopRecordButton"/>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="ZYx-As-Lyj" eventType="touchUpInside" id="vXd-eZ-t4J"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="IgO-cj-FR6" secondAttribute="bottom" constant="10" id="6ny-bw-4fi"/>
+                                            <constraint firstItem="IgO-cj-FR6" firstAttribute="top" secondItem="1Cf-Eu-0Nt" secondAttribute="top" constant="10" id="Qyx-yf-WNZ"/>
+                                            <constraint firstItem="IgO-cj-FR6" firstAttribute="centerX" secondItem="1Cf-Eu-0Nt" secondAttribute="centerX" id="TF0-3Z-y8p"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XLH-s0-cz5" firstAttribute="leading" secondItem="vgS-2b-O80" secondAttribute="leading" id="0CT-Jv-mvX"/>
+                            <constraint firstAttribute="trailing" secondItem="XLH-s0-cz5" secondAttribute="trailing" id="AL5-57-RYl"/>
+                            <constraint firstItem="vgS-2b-O80" firstAttribute="bottom" secondItem="XLH-s0-cz5" secondAttribute="bottom" id="EN1-mb-cmx"/>
+                            <constraint firstItem="XLH-s0-cz5" firstAttribute="top" secondItem="vgS-2b-O80" secondAttribute="top" id="IDI-La-ZuD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vgS-2b-O80"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Xu-IG-SxX"/>
+                    <connections>
+                        <outlet property="chipmunkButton" destination="r14-9g-khf" id="eGt-UR-fzm"/>
+                        <outlet property="echoButton" destination="JMc-sW-int" id="92h-FS-bN4"/>
+                        <outlet property="rabbitButton" destination="sv3-H9-W3X" id="XjE-D1-hMy"/>
+                        <outlet property="reverbButton" destination="W3j-s3-m8G" id="lIj-90-dzW"/>
+                        <outlet property="snailButton" destination="SkS-m8-jkL" id="PHt-Lo-2Ux"/>
+                        <outlet property="stopButton" destination="IgO-cj-FR6" id="4Ki-ip-eaY"/>
+                        <outlet property="vaderButton" destination="Ulj-yT-v3c" id="GX3-Jg-3Of"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYt-FC-E3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1906" y="117"/>
+            <point key="canvasLocation" x="1905.7971014492755" y="116.51785714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mbN-US-f2O">
@@ -132,7 +317,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Echo" width="90" height="90"/>
+        <image name="Fast" width="90" height="90"/>
+        <image name="HigthPitch" width="90" height="90"/>
+        <image name="LowPitch" width="90" height="90"/>
         <image name="RecordButton" width="155" height="155"/>
+        <image name="Reverb" width="90" height="90"/>
+        <image name="Slow" width="90" height="90"/>
         <image name="StopRecordButton" width="155" height="155"/>
     </resources>
 </document>
