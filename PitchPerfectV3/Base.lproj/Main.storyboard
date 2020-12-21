@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Record View Controller-->
+        <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RecordViewController" customModule="PitchPerfectV3" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,10 @@
                                         <rect key="frame" x="0.0" y="258" width="414" height="258"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTb-uy-2U9">
-                                                <rect key="frame" x="129.5" y="51.5" width="155" height="155"/>
+                                                <rect key="frame" x="88" y="10" width="238" height="238"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fTb-uy-2U9" secondAttribute="height" multiplier="1:1" id="XwF-yh-VgM"/>
+                                                </constraints>
                                                 <state key="normal" image="RecordButton"/>
                                                 <connections>
                                                     <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYf-GA-dQ2"/>
@@ -49,6 +52,8 @@
                                         <constraints>
                                             <constraint firstItem="fTb-uy-2U9" firstAttribute="centerY" secondItem="sh1-iI-gEQ" secondAttribute="centerY" id="03u-jC-DBP"/>
                                             <constraint firstItem="fTb-uy-2U9" firstAttribute="centerX" secondItem="sh1-iI-gEQ" secondAttribute="centerX" id="31g-7E-AtV"/>
+                                            <constraint firstAttribute="bottom" secondItem="fTb-uy-2U9" secondAttribute="bottom" constant="10" id="Ras-yE-MRs"/>
+                                            <constraint firstItem="fTb-uy-2U9" firstAttribute="top" secondItem="sh1-iI-gEQ" secondAttribute="top" constant="10" id="rqF-Ch-JKu"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGj-Ev-TYx">
@@ -84,7 +89,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OFb-k1-dzp"/>
+                    <navigationItem key="navigationItem" title="Record" id="OFb-k1-dzp"/>
                     <connections>
                         <outlet property="recordButton" destination="fTb-uy-2U9" id="cHe-KF-QvD"/>
                         <outlet property="recordLabel" destination="Qoi-GF-YFi" id="Kj7-TX-5Tm"/>
@@ -96,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
         </scene>
-        <!--Play Sound View Controller-->
+        <!--Play-->
         <scene sceneID="sFg-jC-nMK">
             <objects>
                 <viewController id="ZYx-As-Lyj" customClass="PlaySoundViewController" customModule="PitchPerfectV3" customModuleProvider="target" sceneMemberID="viewController">
@@ -282,7 +287,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vgS-2b-O80"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4Xu-IG-SxX"/>
+                    <navigationItem key="navigationItem" title="Play" id="4Xu-IG-SxX"/>
                     <connections>
                         <outlet property="chipmunkButton" destination="r14-9g-khf" id="eGt-UR-fzm"/>
                         <outlet property="echoButton" destination="JMc-sW-int" id="92h-FS-bN4"/>
